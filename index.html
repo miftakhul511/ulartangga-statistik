@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ular Tangga Matematika</title>
 
     <link rel="stylesheet" href="style.css?v=4">
 
-    <style>
-        html {
-            overscroll-behavior-y: none;
-        }
+ <style>
+    html {
+        overflow-y: auto !important;
+        overscroll-behavior-y: auto;
+        touch-action: auto;
+    }
 
-        body {
-            overscroll-behavior-y: none;
-        }
-    </style>
+    body {
+        height: auto !important;
+        min-height: 100vh;
+        overflow-y: auto !important;
+        overscroll-behavior-y: auto;
+        touch-action: auto;
+    }
+</style>
 </head>
 <body>
 
@@ -64,13 +70,13 @@
 
     <div class="game-controls">
         <button id="rollButton" onclick="lemparDadu()">🎲 Lempar Dadu</button>
-
+      
     </div>
 
     <div class="dice-container">
         <div id="dice" class="dice" aria-label="Dadu">⚄</div>
     </div>
-
+    
     <div>
                 <button onclick="selesaiGame()" class="finish-btn">🏁 Selesai / Game Baru</button>
         <button onclick="restartGame()" id="restartButton" style="display:none;">🔄 Main Lagi</button>
